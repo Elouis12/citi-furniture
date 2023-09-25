@@ -36,6 +36,21 @@ Image Service: Handles image manipulations.
 
 
 
+
+# GITHUB COMMANDS BEFORE PUSHING TO THE MAIN BRANCH
+
+git checkout -b [branchname] //Navigates to the branch for the push
+
+git push -u origin [branchname] //Push to the target branch
+
+git status //checks on the current state of your repository
+
+git add . //prepares to add the project from the push
+
+git  commit -m "whatever message" //sends the project to github for approval
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
