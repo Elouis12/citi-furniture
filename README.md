@@ -1,10 +1,11 @@
 # citi-furniture
+**Citi Furniture Interior Designer Chatbot Documentation**
 
 For the citi-furniture hackathon this will be the example blueprint to follow
 We will be creating a web application using reactJS to create a bot using GPT4 API.
 This bot will be a interior designer reccomending citi furniture products based on user input or pictures. If a picture is given, the bot will assign a product and display what the product would look like in the RoomView
 
-**Citi Furniture Interior Designer Chatbot Documentation**
+
 
 **Overview**
 
