@@ -1,5 +1,4 @@
 # citi-furniture
-LOOK AT THIS README IN THE CODE VIEW
 
 For the citi-furniture hackathon this will be the example blueprint to follow
 We will be creating a web application using reactJS to create a bot using GPT4 API.
