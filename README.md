@@ -15,10 +15,14 @@ The project aims to create an interior design recommendation system using the GP
 
 Outlined earlier, but to reiterate:
 
-**assets/: Houses static images and icons.
+assets/: Houses static images and icons.
+
 components/: Contains all reusable React components.
+
 services/: Used for utilities and functions related to external services.
-styles/: Contains global styles.**
+
+styles/: Contains global styles.
+
 
 
 **Components & Services Description**
