@@ -95,6 +95,75 @@ function AboutUs() {
             })}
         </div>
       </div>
+<<<<<<< HEAD
+
+
+      
+    {/* Values Grid */}
+    <h2 style={{
+        textAlign: 'center',
+        marginBottom: '2rem',
+        color: 'white'
+    }}>Our core values:</h2>
+
+    <div style={{
+        display: 'grid',
+        gridTemplateColumns: 'repeat(3, 1fr)',
+        gap: '20px',
+        padding: '40px 10%',
+        backgroundColor: '#2C3A47'  // Matching the dark background
+    }}>
+        {/* Accessibility Card */}
+        <div style={{
+            backgroundColor: 'white',
+            color: 'black',
+            borderRadius: '10px',
+            padding: '20px',
+            boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.1)',
+            transition: 'transform 0.2s',
+        }}
+        onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
+        onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
+        >
+            <h2>Accessibility</h2>
+            <p>We strive to make our platform accessible to everyone, ensuring that all users can benefit from our services.</p>
+        </div>
+
+        {/* Inclusivity Card */}
+        <div style={{
+            backgroundColor: 'white',
+            color: 'black',
+            borderRadius: '10px',
+            padding: '20px',
+            boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.1)',
+            transition: 'transform 0.2s',
+        }}
+        onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
+        onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
+        >
+            <h2>Inclusivity</h2>
+            <p>Our community is diverse, and we are committed to fostering an environment where everyone feels included.</p>
+        </div>
+
+        {/* Community Support Card */}
+        <div style={{
+            backgroundColor: 'white',
+            color: 'black',
+            borderRadius: '10px',
+            padding: '20px',
+            boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.1)',
+            transition: 'transform 0.2s',
+        }}
+        onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
+        onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
+        >
+            <h2>Community Support</h2>
+            <p>We believe in giving back. Our initiatives aim to uplift and support the broader community.</p>
+        </div>
+    </div>
+      
+=======
+>>>>>>> 900dcdb728c508b3f87b95cb167f082044ea7ac9
     </>
   );
 }
