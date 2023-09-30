@@ -14,7 +14,9 @@ function Footer() {
             paddingTop: '10px',  // Added top padding for balance
             paddingBottom: '20px'  // Increased bottom padding
         }}>
+
             © 2023 by DecorAItor. Partnered with Habitat for Humanity.
+
         </div>
     );
 }
