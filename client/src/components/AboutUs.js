@@ -53,6 +53,10 @@ function AboutUs() {
             accessible to everyone, everywhere.
           </p>
         </section>
+
+      </div>
+
+
       
     {/* Values Grid */}
     <h2 style={{
@@ -118,6 +122,7 @@ function AboutUs() {
     </div>
 
       </div>
+
       
     </>
   );
