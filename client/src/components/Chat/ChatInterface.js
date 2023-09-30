@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import ChatMessage from './ChatMessage';
+import TitleBar from '../TitleBar';
+import Footer from '../Footer';
 
 function ChatInterface({ roomImage, children }) {
   const [messages, setMessages] = useState([]);
@@ -11,12 +13,10 @@ function ChatInterface({ roomImage, children }) {
 
   return (
     <>
-      {/* Black title bar */}
-      <div style={{ backgroundColor: 'black', height: '60px', width: '100vw', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontSize: '24px' }}>
-        Title
-      </div>
-
-      <div style={{ maxWidth: '600px', margin: 'auto', fontFamily: 'Roboto, sans-serif', display: 'flex', flexDirection: 'column', height: 'calc(100vh - 60px)' }}>
+      <TitleBar />
+      
+      <div style={{ maxWidth: '600px', margin: 'auto', fontFamily: 'Roboto, sans-serif', display: 'flex', flexDirection: 'column', height: 'calc(100vh - 120px)' }}> 
+        {/* Adjusted height to account for TitleBar and Footer */}
         <img src="/decorAItor_logo-removebg-preview.png" alt="Logo" style={{ position: 'absolute', top: '10px', left: '10px', height: '50px', zIndex: 1 }} />
         {roomImage && <img src={roomImage} alt="Room View" style={{ width: '100%', marginBottom: '20px', fontFamily: 'Roboto, sans-serif' }} />}
         {children}
@@ -48,6 +48,8 @@ function ChatInterface({ roomImage, children }) {
           </button>
         </div>
       </div>
+
+      <Footer />
     </>
   );
 }
