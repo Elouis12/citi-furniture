@@ -120,9 +120,6 @@ function AboutUs() {
             <p>We believe in giving back. Our initiatives aim to uplift and support the broader community.</p>
         </div>
     </div>
-
-      </div>
-
       
     </>
   );
