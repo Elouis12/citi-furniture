@@ -14,8 +14,6 @@ app.use(cors({
 }));
 app.enable('trust proxy');
 
-
-
 app.post('/get-furniture', async (req, resp)=>{
 
     const {url, price} = req.body;
@@ -55,6 +53,7 @@ app.post('/get-furniture', async (req, resp)=>{
 
 
 app.listen(5001, ()=>{
+
 
     console.log("Listening on port 5000")
 })
