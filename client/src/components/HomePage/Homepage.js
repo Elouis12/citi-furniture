@@ -7,7 +7,6 @@ function Homepage() {
         <>
             <TitleBar />
 
-
             {/* Hero Section */}
             <div style={{
                 backgroundColor: '#2C3A47', // Dark background
@@ -21,27 +20,27 @@ function Homepage() {
                     src="/decorAItor_logo.png" 
                     alt="Logo" 
                     style={{ 
-                        height: '120px', 
-                        marginBottom: '20px',
-                        borderRadius: '15px'
+                        height: '150px', 
+                        marginBottom: '30px',
+                        borderRadius: '20px'
                     }} 
                 />
-                <h1 style={{ color: '#f5e1da', marginBottom: '20px' }}>Reimagine Your Space</h1>
+                <h1 style={{ color: 'white', marginBottom: '30px' }}>Reimagine Your Space</h1>
                 <Link to="/chat">
                     <button style={{
-                        backgroundColor: '#f5e1da',
+                        backgroundColor: 'white',
                         color: 'black',
-                        padding: '15px 30px',
+                        padding: '15px 35px',
                         border: 'none',
                         borderRadius: '30px',
                         cursor: 'pointer',
-                        fontSize: '18px',
+                        fontSize: '20px',
                         transition: 'transform 0.2s'
                     }}
                     onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
                     onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
                     >
-                        Start Chatting
+                        Get Started
                     </button>
                 </Link>
             </div>
@@ -50,90 +49,18 @@ function Homepage() {
             <div style={{
                 display: 'grid',
                 gridTemplateColumns: 'repeat(2, 1fr)',
-                gap: '20px',
-                padding: '40px 10%',
-                backgroundColor: 'black'
+                gap: '40px',
+                padding: '60px 10%',
+                backgroundColor: '#2C3A47'
             }}>
-                {/* Sample Card */}
-                <div style={{
-                    backgroundColor: '#f5e1da', // Cream background
-                    borderRadius: '10px',
-                    padding: '20px',
-                    boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.1)',
-                    transition: 'transform 0.2s',
-                }}
-                onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
-                onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
-                >
-                    <h2>Feature 1</h2>
-                    <p>Some brief info about the feature.</p>
-                </div>
-                {/* You can add more cards like the above for more features */}
-
-            {/* Hero and Feature Section */}
-            <div style={{
-                backgroundColor: '#2C3A47', // Dark background
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                justifyContent: 'center',
-            }}>
-                {/* Hero Section */}
-                <div style={{
-                    height: '60vh',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    flexDirection: 'column'
-                }}>
-                    <img 
-                        src="/decorAItor_logo.png" 
-                        alt="Logo" 
-                        style={{ 
-                            height: '150px', 
-                            marginBottom: '30px',
-                            borderRadius: '20px'
-                        }} 
-                    />
-                    <h1 style={{ color: 'white', marginBottom: '30px' }}>Reimagine Your Space</h1>
-                    <Link to="/chat">
-                        <button style={{
-                            backgroundColor: 'white', // White background
-                            color: 'black',
-                            padding: '15px 35px',
-                            border: 'none',
-                            borderRadius: '30px',
-                            cursor: 'pointer',
-                            fontSize: '20px',
-                            transition: 'transform 0.2s'
-                        }}
-                        onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
-                        onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
-                        >
-                            Get Started
-                        </button>
-                    </Link>
-                </div>
-
-                {/* Feature Grid */}
-                <div style={{
-                    display: 'grid',
-                    gridTemplateColumns: 'repeat(2, 1fr)',
-                    gap: '40px',
-                    padding: '60px 10%',
-                }}>
-                    {/* Sample Card */}
-                    <FeatureCard title="AI Tools" description="Experience the power of AI in designing your perfect space."/>
-                    <FeatureCard title="Expert Designers" description="Our team of expert designers ensures a unique touch to every project."/>
-                    <FeatureCard title="Affordable Packages" description="High-quality designs that won't break the bank."/>
-                    <FeatureCard title="Custom Solutions" description="Every space is unique. Get tailor-made solutions for your home."/>
-                </div>
->
+                <FeatureCard title="AI Tools" description="Experience the power of AI in designing your perfect space." />
+                <FeatureCard title="Expert Designers" description="Our team of expert designers ensures a unique touch to every project." />
+                <FeatureCard title="Affordable Packages" description="High-quality designs that won't break the bank." />
+                <FeatureCard title="Custom Solutions" description="Every space is unique. Get tailor-made solutions for your home." />
             </div>
         </>
     );
 }
-
 
 function FeatureCard({ title, description }) {
     return (
@@ -152,6 +79,5 @@ function FeatureCard({ title, description }) {
         </div>
     );
 }
-
 
 export default Homepage;
