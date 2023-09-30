@@ -4,6 +4,7 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
+<<<<<<< HEAD
     screens:{
       xs: '480px',
       sm: '640px',
@@ -15,3 +16,10 @@ module.exports = {
   },
   plugins: [],
 }
+=======
+    extend: {},
+  },
+  plugins: [],
+}
+
+>>>>>>> 900dcdb728c508b3f87b95cb167f082044ea7ac9
