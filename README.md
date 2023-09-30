@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -104,4 +103,4 @@ RoomView Component: Visualizes how a recommended product might look in the user'
 GPT-4 Service: Handles interactions with the GPT-4 API.
 Product Service: Gets product details.
 Image Service: Handles image manipulations.
->>>>>>> 335f4317016fefdba5c0be36cae7576cda807e67
+
