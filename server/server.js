@@ -28,7 +28,6 @@ app.post('/get-furniture', async (req, resp)=>{
 
     let listOfFurnitures = [];
 
-    let response;
     for (const entry of Object.entries(furnituredata)) {
 
         const [key, value] = entry;
