@@ -30,6 +30,7 @@ function Footer() {
                     <AiOutlineInstagram size={24} />
                 </a>
             </div>
+            <div className="bg-red-500 h-12 w-12"></div>
 
 
         </footer>
