@@ -25,6 +25,9 @@ function TitleBar() {
         <Link to="/about" style={{ textDecoration: 'none', color: 'white', marginRight: '20px' }}>
           AboutUs
         </Link>
+        <Link to="/partners" style={{ textDecoration: 'none', color: 'white', marginRight: '20px' }}>
+          Our Partners
+        </Link>
       </div>
       
       {/* This is an empty placeholder to maintain space-between justification */}

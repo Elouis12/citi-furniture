@@ -32,10 +32,10 @@ function Homepage() {
                             borderRadius: '20px'
                         }} 
                     />
-                    <h1 style={{ color: '#f5e1da', marginBottom: '30px' }}>Reimagine Your Space</h1>
+                    <h1 style={{ color: 'white', marginBottom: '30px' }}>Reimagine Your Space</h1>
                     <Link to="/chat">
                         <button style={{
-                            backgroundColor: '#f5e1da',
+                            backgroundColor: 'white', // White background
                             color: 'black',
                             padding: '15px 35px',
                             border: 'none',
@@ -73,7 +73,7 @@ function Homepage() {
 function FeatureCard({ title, description }) {
     return (
         <div style={{
-            backgroundColor: '#f5e1da', // Cream background
+            backgroundColor: 'white', // White background
             borderRadius: '20px',
             padding: '40px',
             boxShadow: '0px 8px 30px rgba(0, 0, 0, 0.1)',
@@ -82,8 +82,8 @@ function FeatureCard({ title, description }) {
         onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
         onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
         >
-            <h2>{title}</h2>
-            <p>{description}</p>
+            <h2 style={{ color: 'black' }}>{title}</h2>
+            <p style={{ color: 'black' }}>{description}</p>
         </div>
     );
 }
