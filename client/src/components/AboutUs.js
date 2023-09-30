@@ -1,6 +1,6 @@
 import React from 'react';
 import TitleBar from './TitleBar';
-import Footer from './Footer';
+
 
 function AboutUs() {
   const containerStyle = {

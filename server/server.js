@@ -12,10 +12,11 @@ app.use(cors({
 }));
 app.enable('trust proxy');
 
+generateImage("astronaut in space");
+//getImageResponse(app);
 
-
-
-app.listen(5000, ()=>{
+/*app.listen(5000, ()=>{
 
     console.log("Listening on port 5000")
 })
+*/
