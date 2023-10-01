@@ -51,7 +51,7 @@ function Homepage() {
                     textAlign: 'center',  
                         }}>Reimagine Your Space</h3>
 
-                    <Link to="/chat">
+                    <Link to="/design">
                         <button style={{
                             backgroundColor: 'white',
                             color: 'black',
