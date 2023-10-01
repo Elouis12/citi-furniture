@@ -33,7 +33,7 @@ function App() {
           <div style={contentStyle}>
             <Routes>
               <Route path="/" element={<Homepage />} />
-              <Route path="/chat" element={
+              <Route path="/design" element={
                 
                 <Furniture/>
               } />

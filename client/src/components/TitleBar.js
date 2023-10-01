@@ -26,7 +26,8 @@ function TitleBar() {
       alignItems: 'center', 
       justifyContent: 'space-between', 
       color: 'white', 
-      fontSize: '24px' 
+      fontSize: '24px',
+      /*marginBottom: '100px'*/
     }}>
       <Link to="/" style={{ display: 'flex', alignItems: 'center', marginLeft: '10px', textDecoration: 'none', color: 'white' }}>
         <img src="/decorAItor_logo-removebg-preview.png" alt="Logo" style={{ height: '50px', marginRight: '10px' }} />

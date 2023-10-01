@@ -10,6 +10,7 @@ let furnituredata = {
         },
 
         {
+
             title: "Fremont Gray Fabric Chair",
             imageURL: "https://embed.widencdn.net/img/cityfurniture/qh3m0smkvn/1920x1080px/S1802341588R00_CE_FREM_GRY_FB_CR.webp?keep=c&crop=no&quality=80&u=m2xgp2%201x,%20https://embed.widencdn.net/img/cityfurniture/qh3m0smkvn/3840x2160px/S1802341588R00_CE_FREM_GRY_FB_CR.webp?keep=c&crop=no&quality=80&u=m2xgp2%202x",
             productURL: "https://www.cityfurniture.com/product/2341588/fremont-gray-fabric-chair",

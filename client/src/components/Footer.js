@@ -9,7 +9,7 @@ const logo = '/decorAItor_logo-removebg-preview.png';
 
 function Footer() {
     return (
-        <footer style={{backgroundColor: 'black'}} className="p-6 flex justify-between flex-col">
+        <footer style={{backgroundColor: 'black'}} className="p-6 flex justify-between flex-col /*mt-[100px]*/">
             <img src={logo} alt="Company Logo" className="self-start h-12 w-auto self-center" /> {/* Add logo with desired height and auto width */}
             <div className="text-white font-medium self-center">
                 © 2023 by DecorAItor. Partnered with Habitat for Humanity.

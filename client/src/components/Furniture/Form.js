@@ -1,7 +1,7 @@
 import Dropdown from "./Dropdown";
 import {useState} from "react";
 
-export default function Form({getResponseAndRoomImage}) {
+export default function Form({getResponseAndRoomImage, handleLoading}) {
 
     const [selectedImage, setSelectedImage] = useState(null);
     const [price, setPrice] = useState(null);
@@ -40,6 +40,16 @@ export default function Form({getResponseAndRoomImage}) {
 
     const handleSubmit = async () => {
 
+        // no demographics selected
+        if(
+            demographic === ""
+        ){
+
+            alert("Select a demographic");
+           return;
+        }
+
+        handleLoading(true);
         const URL = 'http://localhost:5001/get-furniture';
         const response = await fetch(URL, {
 
@@ -49,7 +59,8 @@ export default function Form({getResponseAndRoomImage}) {
             },
             body: JSON.stringify({
                 url: selectedImage,
-                userPrompt: userPrompt
+                price: price,
+                demographic: demographic
             })
         });
 
@@ -58,13 +69,19 @@ export default function Form({getResponseAndRoomImage}) {
         console.log(data);
 
         getResponseAndRoomImage(data, selectedImage);
+
+        handleLoading(false);
     }
 
     const handlePriceKeyUp = (e)=>{
 
         const value = e.target.value;
 
-        isNaN(value) ? setPriceInvalid(true) : setPriceInvalid(false);
+        if(isNaN(value)){
+            setPriceInvalid(true)
+        }else{
+            setPriceInvalid(false); setPrice(value)
+        }
     }
 
     const getUserPrompt = (e)=>{
@@ -75,12 +92,12 @@ export default function Form({getResponseAndRoomImage}) {
     }
 
     return (
-        <div className={"w-1/2 m-auto flex flex-col justify-center items-center space-y-4"}>
+        <div className={"w-1/2 mx-auto mt-10 flex flex-col justify-center items-center space-y-4"}>
             <div className="w-full">
-                <label htmlFor="cover-photo" className="block font-medium leading-6 text-slate-500">
+                <label htmlFor="cover-photo" className="block font-medium leading-6 text-white font-bold text-2xl">
                     Room Image
                 </label>
-                <div className={`relative w-full ${ selectedImage ?  'mt-2' :  'mt-2 flex justify-center rounded-lg border border-dashed border-gray-900/25 px-6 py-10'}`}>
+                <div className={`relative w-full ${ selectedImage ?  'mt-2' :  'mt-2  bg-white flex justify-center rounded-lg border border-dashed border-gray-900/25 px-6 py-10'}`}>
 
                 {
                     selectedImage ? (
@@ -118,12 +135,16 @@ export default function Form({getResponseAndRoomImage}) {
 
 
             <div className={"w-full flex flex-col space-y-10"}>
-                <div className={"w-full flex flex-col justify-center items-start space-y-2"}>
-                    <span className={"font-medium leading-6 text-slate-500"}>Describe your need</span>
+                {/*<div className={"w-full flex flex-col justify-center items-start space-y-2"}>
+                    <span className={"font-medium leading-6 text-white font-bold text-2xl"}>Describe your need</span>
                     <input type={"text"} min={2} className={`w-full ring-slate-200 h-10 p-2 text-sm ring-2 rounded-sm`} placeholder={"Give me some design ideas"} onKeyUp={getUserPrompt}/>
+                </div>*/}
+                <div className={"w-full flex flex-col justify-center items-start space-y-2"}>
+                    <span className={"font-medium leading-6 text-white font-bold text-2xl"}>Budget</span>
+                    <input type={"text"} min={2} className={`ring-2 ${priceInvalid ? 'ring-red-300 placeholder-red-300' : 'ring-slate-200' } w-full  h-10 p-2 text-sm ring-2 rounded-sm`} placeholder={"Ex. 100"} onKeyUp={handlePriceKeyUp}/>
                 </div>
 
-                {/*<Dropdown/>*/}
+                <Dropdown getDemographic={(demographic)=>{setDemographic(demographic)}}/>
             </div>
 
                 <button className={"px-4 py-3 bg-[#1877F2] text-white font-semibold w-full rounded-md"} onClick={handleSubmit}>Submit</button>
