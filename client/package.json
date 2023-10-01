@@ -44,12 +44,10 @@
         ]
     },
     "devDependencies": {
-<<<<<<< HEAD
-=======
+
         "autoprefixer": "^10.4.16",
         "postcss": "^8.4.31",
         "postcss-cli": "^10.1.0",
->>>>>>> 900dcdb728c508b3f87b95cb167f082044ea7ac9
         "tailwindcss": "^3.3.3"
     }
 }
