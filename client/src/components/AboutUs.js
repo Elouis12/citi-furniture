@@ -95,8 +95,6 @@ function AboutUs() {
             })}
         </div>
       </div>
-<<<<<<< HEAD
-
 
       
     {/* Values Grid */}
@@ -162,8 +160,6 @@ function AboutUs() {
         </div>
     </div>
       
-=======
->>>>>>> 900dcdb728c508b3f87b95cb167f082044ea7ac9
     </>
   );
 }
