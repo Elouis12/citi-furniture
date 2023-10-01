@@ -44,16 +44,6 @@ const getImageDescription = async (file, question) => {
         }
     );
 
-    console.log(output);
-    console.log(output);
-    console.log(output);
-    console.log(output);
-    console.log(output);
-    console.log(output);
-
-
-
-
     return output;
 }
 
