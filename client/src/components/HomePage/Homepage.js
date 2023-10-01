@@ -19,7 +19,7 @@ function Homepage() {
                         left: 0,
                         width: '100%',
                         height: '100%',
-                        zIndex: -1  // Ensure it's rendered below your content
+                        zIndex: -1  
                     }}
                 />
 
@@ -44,11 +44,11 @@ function Homepage() {
                     <h3 style={{ 
                      color: 'white', 
                     marginBottom: '100px', 
-                    fontSize: '48px',  // Increase font size
-                    fontWeight: 'bold',  // Make font bold
-                    letterSpacing: '1px',  // Slight letter spacing
-                    textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',  // Text shadow for a 3D effect
-                    textAlign: 'center',  // Center align the text
+                    fontSize: '48px',  
+                    fontWeight: 'bold',  
+                    letterSpacing: '1px',  
+                    textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',  
+                    textAlign: 'center',  
                         }}>Reimagine Your Space</h3>
 
                     <Link to="/chat">
@@ -94,7 +94,7 @@ function Homepage() {
 function FeatureCard({ title, description }) {
     return (
         <div style={{
-            backgroundColor: 'white', // White background
+            backgroundColor: 'white', 
             borderRadius: '20px',
             padding: '40px',
             boxShadow: '0px 8px 30px rgba(0, 0, 0, 0.1)',

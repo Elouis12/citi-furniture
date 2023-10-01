@@ -89,11 +89,11 @@ function Partners() {
              <h3 style={{ 
                      color: 'white', 
                     marginBottom: '100px', 
-                    fontSize: '48px',  // Increase font size
-                    fontWeight: 'bold',  // Make font bold
-                    letterSpacing: '1px',  // Slight letter spacing
-                    textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',  // Text shadow for a 3D effect
-                    textAlign: 'center',  // Center align the text
+                    fontSize: '48px',  
+                    fontWeight: 'bold',  
+                    letterSpacing: '1px',  
+                    textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',  
+                    textAlign: 'center',  
                         }}>Our Partners</h3>
 
 

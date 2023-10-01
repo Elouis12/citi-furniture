@@ -24,7 +24,7 @@ const generateImage = async (content) => {
 
     console.log(image.data.data[0].url);
 
-    // let message = image.data.choices[0].message;
+
 
     return "message";
 };
@@ -38,8 +38,7 @@ const getImageDescription = async (file, question) => {
             input: {
                 image: file,
                 question: question,
-                // use_nucleus_sampling: true,
-                // temperature: 7
+                
             }
         }
     );
@@ -50,28 +49,4 @@ const getImageDescription = async (file, question) => {
 module.exports = { generateImage, getImageDescription, getAIResponse };
 
 
-/*
-let { Configuration, OpenAIApi } = require("openai");
-let dotenv = require("dotenv");
-dotenv.config();
 
-
-const configuration = new Configuration({
-    apiKey: process.env.OPENAI_API_KEY,
-});
-
-const openai = new OpenAIApi(configuration);
-
-const getAIResponse = async (content) => {
-
-    const chatCompletion = await openai.createChatCompletion({
-        model: "gpt-3.5-turbo",
-        messages: [{ role: "user", content: content }],
-    });
-
-    let message = chatCompletion.data.choices[0].message;
-
-    return message;
-};
-
-module.exports = { getAIResponse };*/
