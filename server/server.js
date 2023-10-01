@@ -17,12 +17,19 @@ app.enable('trust proxy');
 app.post('/get-furniture', async (req, resp)=>{
 
     const {url, price} = req.body;
+    let AIResponse;
+    let formattedResponse;
 
     // get the description of the room
     const generalDescription = await getImageDescription(url, "Describe this image");
+    const roomTypeDescription = await getImageDescription(url, "In a home, what room would this be?");
     const furnitureDescription = await getImageDescription(url, "What furniture are in this image");
 
-    const roomDescription = generalDescription + "\n" + furnitureDescription;
+    const roomDescription = generalDescription + "\n" + furnitureDescription + "\n" + roomTypeDescription;
+
+    AIResponse = await getAIResponse("Fix any grammatical errors and bad sentence structures so i can sound concise " + roomDescription );
+
+    let formattedRoomDescriptionResponse = AIResponse.content;
 
     let listOfFurnitures = [];
 
@@ -37,17 +44,21 @@ app.post('/get-furniture', async (req, resp)=>{
             prompt += `should we take in this furniture item (as long as the total price is not over the budget, try to consider the furniture with the room description)? ${value[x].description} with a price of ${value[x].price} \n`;
             prompt += `respond with yes or no and also explain why`;
 
-            let AIResponse = await getAIResponse(prompt);
+            AIResponse = await getAIResponse(prompt);
 
-            let formattedResponse = AIResponse.content;
+            formattedResponse = AIResponse.content;
 
-            if(formattedResponse.toLowerCase().includes("yes")){
+            if(/*formattedResponse.toLowerCase().includes("yes")*/ true){
                 listOfFurnitures.push(value[x]);
             }
         }
     }
 
-    resp.json(listOfFurnitures);
+    resp.json({
+
+        roomDescription : formattedRoomDescriptionResponse,
+        listOfFurnitures : listOfFurnitures
+    });
 
 })
 

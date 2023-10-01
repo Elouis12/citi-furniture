@@ -1,9 +1,6 @@
 let openai = require("../config/OpenAIConfig")
 let replicate = require("../config/ReplicateAIConfig")
 
-<<<<<<< HEAD
-=======
-
 
 const getAIResponse = async (content) => {
 
@@ -17,8 +14,6 @@ const getAIResponse = async (content) => {
     return message;
 };
 
-
->>>>>>> f07c96e (worked on wrong branch)
 const generateImage = async (content) => {
 
     const image = await openai.createImage({
@@ -34,11 +29,8 @@ const generateImage = async (content) => {
     return "message";
 };
 
-<<<<<<< HEAD
-const getImageResponse = async (file, question) => {
-=======
 const getImageDescription = async (file, question) => {
->>>>>>> f07c96e (worked on wrong branch)
+
 
     const output = await replicate.run(
         "andreasjansson/blip-2:4b32258c42e9efd4288bb9910bc532a69727f9acd26aa08e175713a0a857a608",
@@ -53,15 +45,20 @@ const getImageDescription = async (file, question) => {
     );
 
     console.log(output);
+    console.log(output);
+    console.log(output);
+    console.log(output);
+    console.log(output);
+    console.log(output);
+
+
+
 
     return output;
 }
 
-<<<<<<< HEAD
-module.exports = { generateImage, getImageResponse };
-=======
 module.exports = { generateImage, getImageDescription, getAIResponse };
->>>>>>> f07c96e (worked on wrong branch)
+
 
 /*
 let { Configuration, OpenAIApi } = require("openai");
