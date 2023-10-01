@@ -1,18 +1,17 @@
 import React, { useState } from 'react';
-import TitleBar from './TitleBar';
-import Footer from './Footer';
+import Spline from '@splinetool/react-spline';
 
 function Partners() {
     const [showHfHContent, setShowHfHContent] = useState(false);
     const [showCityFurnitureContent, setShowCityFurnitureContent] = useState(false);
 
     const containerStyle = {
+        position: 'relative',  // Make container position relative
+        minHeight: '100%',  // Ensure container covers the full page height
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: '#2C3A47',
-        color: 'white',
         padding: '3rem 0',
         fontFamily: 'Roboto, sans-serif'
     };
@@ -74,20 +73,36 @@ function Partners() {
 
     return (
         <>
-            <TitleBar />
-
+            {/* Spline Background */}
+            <Spline 
+                scene="https://prod.spline.design/sOoV8XZEuyPiIPR3/scene.splinecode"
+                style={{
+                    position: 'absolute',  // Absolute position
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '100%',
+                    zIndex: -1  // Ensure it's rendered below your content
+                }}
+            />
             <div style={containerStyle}>
-                <header style={headerStyle}>
-                    <h1 style={{ fontSize: '2.5rem' }}>Our Partners</h1>
-                    <div style={headerLineStyle}></div>
-                </header>
+             <h3 style={{ 
+                     color: 'white', 
+                    marginBottom: '100px', 
+                    fontSize: '48px',  // Increase font size
+                    fontWeight: 'bold',  // Make font bold
+                    letterSpacing: '1px',  // Slight letter spacing
+                    textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',  // Text shadow for a 3D effect
+                    textAlign: 'center',  // Center align the text
+                        }}>Our Partners</h3>
+
 
                 <div style={cardsContainerStyle}>
                     {/* Habitat for Humanity Card */}
                     <div style={cardContainerStyle}>
                         <img src="/HfH_logo.png" alt="Habitat for Humanity Logo" style={logoStyle} onClick={() => setShowHfHContent(!showHfHContent)} />
                         <div style={{ ...contentStyle, width: showHfHContent ? '300px' : '0', visibility: showHfHContent ? 'visible' : 'hidden' }}>
-                            <h2>Habitat for Humanity</h2>
+                            <h2>Habitat for Humanity:</h2>
                             <p>
                                 Habitat for Humanity is a global nonprofit housing organization working in local communities 
                                 across all 50 states in the U.S. and in approximately 70 countries. They work towards a vision 
@@ -99,8 +114,8 @@ function Partners() {
                     {/* City Furniture Card */}
                     <div style={cardContainerStyle}>
                         <img src="/City_Furniture_Logo.jpg" alt="City Furniture Logo" style={logoStyle} onClick={() => setShowCityFurnitureContent(!showCityFurnitureContent)} />
-                        <div style={{ ...contentStyle, width: showCityFurnitureContent ? '300px' : '0', visibility: showCityFurnitureContent ? 'visible' : 'hidden' }}>
-                            <h2>City Furniture</h2>
+                        <div style={{ ...contentStyle, width: showCityFurnitureContent ? '330px' : '0', visibility: showCityFurnitureContent ? 'visible' : 'hidden' }}>
+                            <h2>City Furniture:</h2>
                             <p>
                                 City Furniture is one of the leading furniture retailers, providing high-quality furniture 
                                 and home accessories for over 40 years. We are proud to partner with City Furniture to 
@@ -111,10 +126,7 @@ function Partners() {
                         </div>
                     </div>
                 </div>
-
             </div>
-
-            <Footer />
         </>
     );
 }
