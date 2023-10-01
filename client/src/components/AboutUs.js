@@ -1,15 +1,21 @@
 import React from 'react';
+import Spline from '@splinetool/react-spline';
 
 function AboutUs() {
   const containerStyle = {
+    position: 'relative',  // Make container position relative
+    minHeight: '100vh',  // Ensure container covers the full viewport height
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    backgroundColor: '#2C3A47', // Dark background color
+    // backgroundColor: '#2C3A47', // Remove this line
     color: 'white',
     padding: '3rem 0',
     fontFamily: 'Roboto, sans-serif'
-  };
+};
+
+
+
 
   const headerStyle = {
     textAlign: 'center',
@@ -40,6 +46,19 @@ function AboutUs() {
 
   return (
     <div style={containerStyle}>
+      {/* Spline Background */}
+      <Spline 
+          scene="https://prod.spline.design/sOoV8XZEuyPiIPR3/scene.splinecode"
+          style={{
+              position: 'absolute',  // Absolute position
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+              zIndex: -1  // Ensure it's rendered below your content
+          }}
+      />
+
       <header style={headerStyle}>
         <h1 style={{fontSize: '2.5rem'}}>About Us</h1>
         <div style={headerLineStyle}></div>
@@ -50,11 +69,15 @@ function AboutUs() {
       </section>
 
       {/* Values Grid */}
-      <h2 style={{
-          textAlign: 'center',
-          marginBottom: '2rem',
-          color: 'white'
-      }}>Our core values:</h2>
+      <h3 style={{ 
+                     color: 'white', 
+                    marginBottom: '100px', 
+                    fontSize: '48px',  // Increase font size
+                    fontWeight: 'bold',  // Make font bold
+                    letterSpacing: '1px',  // Slight letter spacing
+                    textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',  // Text shadow for a 3D effect
+                    textAlign: 'center',  // Center align the text
+                        }}>Our Core Values</h3>
 
       <div style={{
           display: 'grid',

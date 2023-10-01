@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
+import Spline from '@splinetool/react-spline';
 
 function Partners() {
     const [showHfHContent, setShowHfHContent] = useState(false);
     const [showCityFurnitureContent, setShowCityFurnitureContent] = useState(false);
 
     const containerStyle = {
+        position: 'relative',  // Make container position relative
+        minHeight: '100%',  // Ensure container covers the full page height
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: '#2C3A47',
-        color: 'white',
         padding: '3rem 0',
         fontFamily: 'Roboto, sans-serif'
     };
@@ -72,13 +73,29 @@ function Partners() {
 
     return (
         <>
-            
-
+            {/* Spline Background */}
+            <Spline 
+                scene="https://prod.spline.design/sOoV8XZEuyPiIPR3/scene.splinecode"
+                style={{
+                    position: 'absolute',  // Absolute position
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '100%',
+                    zIndex: -1  // Ensure it's rendered below your content
+                }}
+            />
             <div style={containerStyle}>
-                <header style={headerStyle}>
-                    <h1 style={{ fontSize: '2.5rem' }}>Our Partners</h1>
-                    <div style={headerLineStyle}></div>
-                </header>
+             <h3 style={{ 
+                     color: 'white', 
+                    marginBottom: '100px', 
+                    fontSize: '48px',  // Increase font size
+                    fontWeight: 'bold',  // Make font bold
+                    letterSpacing: '1px',  // Slight letter spacing
+                    textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',  // Text shadow for a 3D effect
+                    textAlign: 'center',  // Center align the text
+                        }}>Our Partners</h3>
+
 
                 <div style={cardsContainerStyle}>
                     {/* Habitat for Humanity Card */}
@@ -109,10 +126,7 @@ function Partners() {
                         </div>
                     </div>
                 </div>
-
             </div>
-
-            
         </>
     );
 }
