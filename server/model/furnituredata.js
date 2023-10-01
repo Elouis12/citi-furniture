@@ -49,7 +49,7 @@ let furnituredata = {
         },
 
         {
-            url: "https://www.cityfurniture.com/product/2341588/fremont-gray-fabric-chair",
+            url: "https://w ww.cityfurniture.com/product/2341588/fremont-gray-fabric-chair",
             description: "The Fremont chair is a cozy and stylish add to your space that serves its purpose wonderfully. Perfect as a solo accent piece or in unison with the Fremont sectional or sofa, this chair stands out effortlessly.",
             price: 118.43
         },
