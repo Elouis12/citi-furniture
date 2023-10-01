@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import TitleBar from './TitleBar';
-import Footer from './Footer';
 
 function Partners() {
     const [showHfHContent, setShowHfHContent] = useState(false);
@@ -74,7 +72,7 @@ function Partners() {
 
     return (
         <>
-            <TitleBar />
+            
 
             <div style={containerStyle}>
                 <header style={headerStyle}>
@@ -87,7 +85,7 @@ function Partners() {
                     <div style={cardContainerStyle}>
                         <img src="/HfH_logo.png" alt="Habitat for Humanity Logo" style={logoStyle} onClick={() => setShowHfHContent(!showHfHContent)} />
                         <div style={{ ...contentStyle, width: showHfHContent ? '300px' : '0', visibility: showHfHContent ? 'visible' : 'hidden' }}>
-                            <h2>Habitat for Humanity</h2>
+                            <h2>Habitat for Humanity:</h2>
                             <p>
                                 Habitat for Humanity is a global nonprofit housing organization working in local communities 
                                 across all 50 states in the U.S. and in approximately 70 countries. They work towards a vision 
@@ -99,8 +97,8 @@ function Partners() {
                     {/* City Furniture Card */}
                     <div style={cardContainerStyle}>
                         <img src="/City_Furniture_Logo.jpg" alt="City Furniture Logo" style={logoStyle} onClick={() => setShowCityFurnitureContent(!showCityFurnitureContent)} />
-                        <div style={{ ...contentStyle, width: showCityFurnitureContent ? '300px' : '0', visibility: showCityFurnitureContent ? 'visible' : 'hidden' }}>
-                            <h2>City Furniture</h2>
+                        <div style={{ ...contentStyle, width: showCityFurnitureContent ? '330px' : '0', visibility: showCityFurnitureContent ? 'visible' : 'hidden' }}>
+                            <h2>City Furniture:</h2>
                             <p>
                                 City Furniture is one of the leading furniture retailers, providing high-quality furniture 
                                 and home accessories for over 40 years. We are proud to partner with City Furniture to 
@@ -114,7 +112,7 @@ function Partners() {
 
             </div>
 
-            <Footer />
+            
         </>
     );
 }

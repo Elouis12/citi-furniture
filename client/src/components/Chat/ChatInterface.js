@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ChatMessage from './ChatMessage';
-import TitleBar from '../TitleBar';
+
 
 function ChatInterface({ roomImage, children }) {
   const [messages, setMessages] = useState([]);
@@ -15,7 +15,7 @@ function ChatInterface({ roomImage, children }) {
 
   return (
     <>
-      <TitleBar />
+      
 
       <div style={{
         fontFamily: 'Roboto, sans-serif',

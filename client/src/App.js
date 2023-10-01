@@ -8,6 +8,8 @@ import AboutUs from './components/AboutUs';  // Import the AboutUs component
 import Partners from './components/Partners';
 // import Form from "./components/Furniture/Form";  // Import the Partners component
 import Furniture from "./components/Furniture/Furniture";  // Import the Partners component
+import TitleBar from './components/TitleBar.js';  // Import the TitleBar component
+import Footer from './components/Footer.js';
 
 function App() {
   const [roomImage, setRoomImage] = useState(null);
@@ -15,6 +17,7 @@ function App() {
   return (
     <Router>
       <div className="App">
+        <TitleBar />
 
         <Routes>
           <Route path="/" element={<Homepage />} />
@@ -27,6 +30,7 @@ function App() {
           <Route path="/about" element={<AboutUs />} />  {/* Add a route for the AboutUs page */}
           <Route path="/partners" element={<Partners />} />  {/* Add a route for the Partners page */}
         </Routes>
+        <Footer />
       </div>
     </Router>
         // <Form/>
