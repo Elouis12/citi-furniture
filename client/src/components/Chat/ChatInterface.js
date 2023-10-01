@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ChatMessage from './ChatMessage';
-
+import Spline from '@splinetool/react-spline';
 
 function ChatInterface({ roomImage, children }) {
   const [messages, setMessages] = useState([]);
@@ -15,16 +15,28 @@ function ChatInterface({ roomImage, children }) {
 
   return (
     <>
-      
+      {/* Spline Background */}
+      <Spline 
+                scene="https://prod.spline.design/sOoV8XZEuyPiIPR3/scene.splinecode"
+                style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '100%',
+                    zIndex: -1
+                }}
+            />
 
       <div style={{
         fontFamily: 'Roboto, sans-serif',
         display: 'flex',
         flexDirection: 'column',
         height: '100vh',
-        backgroundColor: '#2C3A47',
+       // backgroundColor: '#2C3A47',
         alignItems: 'center',  // Center content
-        justifyContent: 'center'  // Vertically center
+        justifyContent: 'center',  // Vertically center
+        position: 'relative',  // Relative position to overlay the Spline background
       }}>
         <div style={{
           maxWidth: '600px',
