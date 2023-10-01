@@ -8,6 +8,7 @@ export default function Form({getResponseAndRoomImage}) {
     const [priceInvalid, setPriceInvalid] = useState(false);
     const [demographic, setDemographic] = useState("");
     const [furniture, setFurniture] = useState([]);
+    const [userPrompt, setUserPrompt] = useState("");
 
     const handleFileChange = (event) => {
         const file = event.target.files[0];
@@ -48,7 +49,7 @@ export default function Form({getResponseAndRoomImage}) {
             },
             body: JSON.stringify({
                 url: selectedImage,
-                price: price
+                userPrompt: userPrompt
             })
         });
 
@@ -64,6 +65,13 @@ export default function Form({getResponseAndRoomImage}) {
         const value = e.target.value;
 
         isNaN(value) ? setPriceInvalid(true) : setPriceInvalid(false);
+    }
+
+    const getUserPrompt = (e)=>{
+
+        const prompt = e.target.value;
+
+        setUserPrompt(prompt);
     }
 
     return (
@@ -111,11 +119,11 @@ export default function Form({getResponseAndRoomImage}) {
 
             <div className={"w-full flex flex-col space-y-10"}>
                 <div className={"w-full flex flex-col justify-center items-start space-y-2"}>
-                    <span className={"font-medium leading-6 text-slate-500"}>Max Price</span>
-                    <input type={"text"} min={2} className={`${priceInvalid ? 'ring-red-200' : 'ring-slate-200 h-10'} h-10 p-2 text-sm ring-2 rounded-sm`} onKeyUp={handlePriceKeyUp} placeholder={"What's your budget?"}/>
+                    <span className={"font-medium leading-6 text-slate-500"}>Describe your need</span>
+                    <input type={"text"} min={2} className={`w-full ring-slate-200 h-10 p-2 text-sm ring-2 rounded-sm`} placeholder={"Give me some design ideas"} onKeyUp={getUserPrompt}/>
                 </div>
 
-                <Dropdown/>
+                {/*<Dropdown/>*/}
             </div>
 
                 <button className={"px-4 py-3 bg-[#1877F2] text-white font-semibold w-full rounded-md"} onClick={handleSubmit}>Submit</button>
